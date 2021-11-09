@@ -100,10 +100,12 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="modules.html#convertToAsset" class="tsd-kind-icon">convert<wbr>ToAsset</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#createBurnerWallet" class="tsd-kind-icon">create<wbr>Burner<wbr>Wallet</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#defaultConfiguration" class="tsd-kind-icon">default<wbr>Configuration</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#getCompositeKey" class="tsd-kind-icon">get<wbr>Composite<wbr>Key</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#isBscAddress" class="tsd-kind-icon">is<wbr>Bsc<wbr>Address</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#nameToHex" class="tsd-kind-icon">name<wbr>ToHex</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#privateKeyToBurnerWallet" class="tsd-kind-icon">private<wbr>Key<wbr>ToBurner<wbr>Wallet</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#stringToHex" class="tsd-kind-icon">string<wbr>ToHex</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#waitFor" class="tsd-kind-icon">wait<wbr>For</a></li>
 							</ul>
@@ -119,7 +121,7 @@
 					<div class="tsd-signature tsd-kind-icon">Api<wbr>Token<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>access_token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>created_at<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>expires_at<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>refresh_token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scope<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>token_type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/types/auth-token.ts#L3">src/types/auth-token.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/types/auth-token.ts#L3">src/types/auth-token.ts:3</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -152,7 +154,7 @@
 					<div class="tsd-signature tsd-kind-icon">Auth<wbr>Token<span class="tsd-signature-symbol">:</span> <a href="modules.html#ApiTokenInfo" class="tsd-signature-type" data-tsd-kind="Type alias">ApiTokenInfo</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/types/auth-token.ts#L1">src/types/auth-token.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/types/auth-token.ts#L1">src/types/auth-token.ts:1</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -162,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">Error<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>details<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">; </span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>trace_id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/types/error.ts#L1">src/types/error.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/types/error.ts#L1">src/types/error.ts:1</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -201,7 +203,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/utils/asset.ts#L7">src/utils/asset.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/asset.ts#L7">src/utils/asset.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -222,6 +224,40 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="createBurnerWallet" class="tsd-anchor"></a>
+					<h3>create<wbr>Burner<wbr>Wallet</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Burner<wbr>Wallet<span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Account</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/burnerWallet.ts#L9">src/utils/burnerWallet.ts:9</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>link</dt>
+									<dd><p><a href="https://web3js.readthedocs.io/en/v1.3.6/web3-eth-accounts.html#create">https://web3js.readthedocs.io/en/v1.3.6/web3-eth-accounts.html#create</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>web3: <span class="tsd-signature-type">Web3</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Web3 object</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Account</span></h4>
+							<p>Account object with private key and address.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="defaultConfiguration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Configuration</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -231,7 +267,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/config/config.ts#L14">src/config/config.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/config/config.ts#L14">src/config/config.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -270,7 +306,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/utils/compositeKey.ts#L8">src/utils/compositeKey.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/compositeKey.ts#L8">src/utils/compositeKey.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -308,7 +344,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/utils/bscAddress.ts#L6">src/utils/bscAddress.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/bscAddress.ts#L6">src/utils/bscAddress.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -336,7 +372,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/utils/hex.ts#L20">src/utils/hex.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/hex.ts#L20">src/utils/hex.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -356,6 +392,46 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="privateKeyToBurnerWallet" class="tsd-anchor"></a>
+					<h3>private<wbr>Key<wbr>ToBurner<wbr>Wallet</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">private<wbr>Key<wbr>ToBurner<wbr>Wallet<span class="tsd-signature-symbol">(</span>web3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Web3</span>, privateKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Account</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/burnerWallet.ts#L18">src/utils/burnerWallet.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>link</dt>
+									<dd><p><a href="https://web3js.readthedocs.io/en/v1.3.6/web3-eth-accounts.html#privatekeytoaccount">https://web3js.readthedocs.io/en/v1.3.6/web3-eth-accounts.html#privatekeytoaccount</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>web3: <span class="tsd-signature-type">Web3</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Web3 object</p>
+									</div>
+								</li>
+								<li>
+									<h5>privateKey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>String</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Account</span></h4>
+							<p>Account object generated from private key.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="stringToHex" class="tsd-anchor"></a>
 					<h3>string<wbr>ToHex</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -365,7 +441,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/utils/hex.ts#L8">src/utils/hex.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/hex.ts#L8">src/utils/hex.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -397,7 +473,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/6359cd5/src/utils/time.ts#L7">src/utils/time.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/effectai/effect-js/blob/3c9f19f/src/utils/time.ts#L7">src/utils/time.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -479,6 +555,9 @@
 						<a href="modules.html#convertToAsset" class="tsd-kind-icon">convert<wbr>ToAsset</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="modules.html#createBurnerWallet" class="tsd-kind-icon">create<wbr>Burner<wbr>Wallet</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="modules.html#defaultConfiguration" class="tsd-kind-icon">default<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-function">
@@ -489,6 +568,9 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#nameToHex" class="tsd-kind-icon">name<wbr>ToHex</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#privateKeyToBurnerWallet" class="tsd-kind-icon">private<wbr>Key<wbr>ToBurner<wbr>Wallet</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#stringToHex" class="tsd-kind-icon">string<wbr>ToHex</a>
