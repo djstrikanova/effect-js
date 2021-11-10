@@ -1,6 +1,6 @@
 {
   "name": "@effectai/effect-js",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "Effect Network Javscript/Typescript SDK (for [https://effect.network](https://effect.network))",
   "main": "dist/lib/index.js",
   "module": "dist/libs/index.js",
@@ -14,17 +14,13 @@
     "test": "echo \"🔥\"",
     "dev": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
     "watch": "tsc --watch",
-
     "clean": "rm -rf dist",
     "bundle": "webpack",
     "rollup": "rollup -c rollup.config.js",
-    
     "lint": "eslint \"src/**\"",
     "prepare": "husky install",
-    
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
-    
     "prebuild": "rimraf docs dist",
     "build": "npm run build:cjs",
     "build:cjs": "tsc --module commonjs",
@@ -32,7 +28,6 @@
     "build:umd": "tsc --module umd",
     "build:amd": "tsc --module amd",
     "build:system": "tsc --module system",
-
     "publish:latest": "npm version patch && npm run build && npm publish",
     "publish:next": "npm run prebuild && npm version patch &&  npm run build && npm publish --tag next ",
     "publish:cjs": "npm run prebuild && npm version patch &&  npm run build:cjs && npm publish --tag cjs ",
