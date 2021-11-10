@@ -14,7 +14,7 @@ import BN from 'bn.js';
 // const EC = require('elliptic').ec;
 // const ec = new EC('secp256k1');
 
-import EC from 'elliptic';
+import * as EC from 'elliptic';
 const ec = new EC.ec('secp256k1');
 
 /**
