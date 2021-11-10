@@ -10,8 +10,12 @@ import { utils } from 'ethers';
 import { EffectAccount } from '../types/effectAccount';
 import BN from 'bn.js';
 
-const EC = require('elliptic').ec;
-const ec = new EC('secp256k1');
+
+// const EC = require('elliptic').ec;
+// const ec = new EC('secp256k1');
+
+import EC from 'elliptic';
+const ec = new EC.ec('secp256k1');
 
 /**
  * > “Elinor agreed to it all, for she did not think he deserved the compliment of rational opposition.” ― Jane Austen
@@ -38,15 +42,15 @@ export class BaseContract {
     this.api = api;
     this.config = configuration;
     this.web3 = this.config.web3;
-    if (environment === 'node'){
-      import('@web-std/fetch').then(module => this.fetch = module.default)
-      import('@web-std/blob').then(module => this.blob = module.Blob)
-      import('@web-std/form-data').then(module => this.formData =  module.FormData)
-    } else {
-      this.fetch = fetch
-      this.blob = Blob
-      this.formData = FormData
-    }
+    // if (environment === 'node'){
+    //   import('@web-std/fetch').then(module => this.fetch = module.default)
+    //   import('@web-std/blob').then(module => this.blob = module.Blob)
+    //   import('@web-std/form-data').then(module => this.formData =  module.FormData)
+    // } else {
+    // }
+    this.fetch = fetch
+    this.blob = Blob
+    this.formData = FormData
   }
 
   isAccountIsConnected(): boolean {
