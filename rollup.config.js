@@ -6,7 +6,7 @@ export default {
   output: {
     name: 'bundle.umd.js',
     dir: 'dist',
-    format: 'umd' // umd, es, iife, cjs, amd, system, iife
+    format: 'iife' // umd, es, iife, cjs, amd, system, iife
   },
   plugins: [typescript()]
 };
