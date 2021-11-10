@@ -2,8 +2,8 @@ import { Account } from './../account/account';
 import * as ethlib from 'eth-lib/lib/account';
 import { EffectClientConfig } from './../types/effectClientConfig';
 import { Api, Serialize } from 'eosjs'
-// import RIPEMD160 from "eosjs/dist/ripemd"
 import * as RIPEMD160 from "eosjs/dist/ripemd"
+// import * as RIPEMD160 from "eosjs/dist/ripemd"
 import Web3 from 'web3';
 import { Signature } from 'eosjs/dist/eosjs-key-conversions';
 import { utils } from 'ethers';
@@ -18,7 +18,7 @@ const ec = new EC('secp256k1');
  * 
  * The BaseContract class is the base class for Accounts and Force classes. 
  * It's main functionality is to handle the signatures and the connection to the network.
- */cjs
+ */
 export class BaseContract {
   api: Api;
   web3: Web3;
