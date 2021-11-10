@@ -3,14 +3,14 @@ import { EffectClientConfig } from './../types/effectClientConfig';
 import { Api, Serialize } from 'eosjs';
 import { GetTableRowsResult, PushTransactionArgs, ReadOnlyTransactResult } from "eosjs/dist/eosjs-rpc-interfaces";
 import { MerkleTree } from 'merkletreejs';
-import SHA256 from 'crypto-js/sha256';
+import * as SHA256 from 'crypto-js/sha256';
 import { isBscAddress } from '../utils/bscAddress'
 import { convertToAsset } from '../utils/asset'
 import { getCompositeKey } from '../utils/compositeKey'
 import { stringToHex } from '../utils/hex'
 import { TransactResult } from 'eosjs/dist/eosjs-api-interfaces';
 import { Task } from '../types/task';
-import ecc from 'eosjs-ecc';
+import * as ecc from 'eosjs-ecc';
 import { Signature } from 'eosjs/dist/Signature';
 
 
