@@ -9,7 +9,16 @@ import { nameToHex } from '../utils/hex'
 import { vAccountRow } from '../types/vAccountRow';
 import { TransactResult } from 'eosjs/dist/eosjs-api-interfaces';
 import { ReadOnlyTransactResult, PushTransactionArgs } from 'eosjs/dist/eosjs-rpc-interfaces';
-import { Signature } from 'eosjs/dist/Signature';
+
+// import { Signature } from 'eosjs/dist/Signature';
+// import { Signature } from 'eosjs/dist/eosjs-key-conversions';
+// import { Signature } from "eosjs/dist/eosjs-jssig";
+// import { Signature } from 'eosjs/dist/Signature'
+// import { Signature } from 'eosjs/dist/eosjs-key-conversions'
+
+
+
+
 
 /**
  * > “And he read Principles of Accounting all morning, but just to make it interesting, he put lots of dragons in it.” ― Terry Pratchett, Wintersmith 
@@ -183,7 +192,7 @@ export class Account extends BaseContract {
    * @returns transaction result
    */
   withdraw = async (toAccount: string, amountEfx: string, memo?: string): Promise<ReadOnlyTransactResult | TransactResult | PushTransactionArgs> => {
-    let sig: Signature;
+    let sig;
 
     await this.updatevAccountRows()
     const amount = convertToAsset(amountEfx)
@@ -243,7 +252,8 @@ export class Account extends BaseContract {
    * @returns transaction result
    */
   vtransfer = async (toAccount: string, toAccountId: number, amountEfx: string): Promise<ReadOnlyTransactResult | TransactResult | PushTransactionArgs> => {
-    let sig: Signature;
+    // let sig: Signature;
+    let sig;
 
     await this.updatevAccountRows()
     const balanceTo: object = await this.getVAccountByName(toAccount)

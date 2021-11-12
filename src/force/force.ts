@@ -11,7 +11,14 @@ import { stringToHex } from '../utils/hex'
 import { TransactResult } from 'eosjs/dist/eosjs-api-interfaces';
 import { Task } from '../types/task';
 import * as ecc from 'eosjs-ecc';
-import { Signature } from 'eosjs/dist/Signature';
+// import {  } from 'eosjs-ecc';
+// import { Signature } from 'eosjs/dist/Signature';
+// import { Signature } from 'eosjs/dist/eosjs-key-conversions';
+// import { Signature } from "eosjs/dist/eosjs-jssig";
+// import { Signature } from 'eosjs/dist/Signature'
+// import { Signature } from 'eosjs/dist/eosjs-key-conversions'
+
+
 
 
 /**
@@ -177,7 +184,8 @@ export class Force extends BaseContract {
    */
   joinCampaign = async (campaignId: number): Promise<ReadOnlyTransactResult | TransactResult | PushTransactionArgs> => {
     try {
-      let sig: Signature
+      // let sig: Signature
+      let sig;
       const owner = this.effectAccount.accountName
 
       if (isBscAddress(owner)) {
@@ -262,7 +270,8 @@ export class Force extends BaseContract {
 
   createBatch = async (campaignId: number, batchId: number, content, repetitions): Promise<ReadOnlyTransactResult | TransactResult | PushTransactionArgs> => {
     try {
-      let sig: Signature
+      // let sig: Signature
+      let sig;
 
       const hash = await this.uploadCampaign(content)
       const merkleRoot = this.getMerkleRoot(content.tasks)
@@ -315,7 +324,8 @@ export class Force extends BaseContract {
    */
   createCampaign = async (hash: string, quantity: string): Promise<ReadOnlyTransactResult | TransactResult | PushTransactionArgs> => {
     try {
-      let sig: Signature
+      // let sig: Signature
+      // let sig;
       const owner = this.effectAccount.accountName
 
       if(isBscAddress(owner)) {
@@ -324,7 +334,7 @@ export class Force extends BaseContract {
         serialbuff.push(0)
         serialbuff.pushString(hash)
         
-        sig = await this.generateSignature(serialbuff)
+        // sig = await this.generateSignature(serialbuff)
       }
 
       return await this.api.transact({
@@ -343,7 +353,7 @@ export class Force extends BaseContract {
               contract: this.config.efx_token_account
             },
             payer: isBscAddress(owner) ? this.config.eos_relayer : owner,
-            sig: isBscAddress(owner) ? sig.toString() : null
+            // // sig: isBscAddress(owner) ? sig.toString() : null
           },
         }]
       }, {
@@ -383,7 +393,8 @@ export class Force extends BaseContract {
   reserveTask = async (batchId: number, taskIndex: number, campaignId: number, tasks: Array<Task>): Promise<ReadOnlyTransactResult | TransactResult | PushTransactionArgs> => {
 
     try {
-      let sig: Signature
+      // let sig: Signature
+      let sig;
       
       const user = this.effectAccount.accountName
       const accountId = this.effectAccount.vAccountRows[0].id
@@ -446,7 +457,8 @@ export class Force extends BaseContract {
    */
   submitTask = async (batchId: number, submissionId: number, data: string): Promise<ReadOnlyTransactResult | TransactResult | PushTransactionArgs> => {
     try {
-      let sig: Signature
+      // let sig: Signature
+      let sig;
       const accountId = this.effectAccount.vAccountRows[0].id
       const user = this.effectAccount.accountName
       if (isBscAddress(user)) {

@@ -3,19 +3,30 @@ import * as ethlib from 'eth-lib/lib/account';
 import { EffectClientConfig } from './../types/effectClientConfig';
 import { Api, Serialize } from 'eosjs'
 import * as RIPEMD160 from "eosjs/dist/ripemd"
-// import * as RIPEMD160 from "eosjs/dist/ripemd"
 import Web3 from 'web3';
-import { Signature } from 'eosjs/dist/eosjs-key-conversions';
+
 import { utils } from 'ethers';
 import { EffectAccount } from '../types/effectAccount';
 import BN from 'bn.js';
 
 
+
+// import { Signature } from 'eosjs/dist/Signature'
+// import { Signature } from 'eosjs/dist/eosjs-key-conversions'
+import { Signature } from 'eosjs/dist/eosjs-jssig';
+
+
 // const EC = require('elliptic').ec;
 // const ec = new EC('secp256k1');
 
-import * as EC from 'elliptic';
-const ec = new EC.ec('secp256k1');
+// import * as elliptic from 'elliptic';
+// import * as elliptic from 'elliptic/lib/elliptic/ec'
+// const elliptic = await import('elliptic');
+import elliptic from 'elliptic';
+// import { ec as elliptic } from 'elliptic';
+// import * as elliptic from 'elliptic'
+// import { default as elliptic } from 'elliptic';
+const ec = new elliptic.default.ec('secp256k1');
 
 /**
  * > “Elinor agreed to it all, for she did not think he deserved the compliment of rational opposition.” ― Jane Austen
@@ -118,8 +129,8 @@ export class BaseContract {
    * @param serialbuff 
    * @returns signature
    */
-  generateSignature = async (serialbuff: Serialize.SerialBuffer): Promise<Signature> => {
-    let sig = undefined
+  generateSignature = async (serialbuff: Serialize.SerialBuffer): Promise<string> => {
+    let sig;
     const bytes = serialbuff.asUint8Array()
   
     let paramsHash = ec.hash().update(bytes).digest()
@@ -142,7 +153,7 @@ export class BaseContract {
     sig.s = new BN(sig.s.substring(2), 16)
     sig = Signature.fromElliptic(sig, 0)
   
-    return sig
+    return sig.toString()
   }
 
   /**
