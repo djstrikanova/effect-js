@@ -1,4 +1,3 @@
-import { JsSignatureProvider } from "eosjs/dist/eosjs-jssig";
 import { SignatureProvider } from "eosjs/dist/eosjs-api-interfaces";
 import Web3 from "web3";
 
@@ -17,7 +16,7 @@ import Web3 from "web3";
     /**
      * EOS Signature Provider
      */
-    signatureProvider: JsSignatureProvider | SignatureProvider
+    signatureProvider: SignatureProvider
 
     /**
      * The host where the json-rpc will connect to.

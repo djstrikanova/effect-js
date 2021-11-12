@@ -1,6 +1,4 @@
 import { EffectClientConfig } from './../types/effectClientConfig';
-import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';
-import Web3 from 'web3';
 
 /**
  * Build default configuration object to be passed to client instantiation.
@@ -17,9 +15,9 @@ export const defaultConfiguration = (environment: string = 'testnet', config?: E
     if (config.network === 'kylin') {
         return {
             network:                config.network                ?? "kylin",
-            signatureProvider:      config.signatureProvider      ?? new JsSignatureProvider(['5KKjmMyCfdvmw1bhGJ8gsUDGmaW1Dph3B9WVjYvyiQNMGJuvPG2']),
+            signatureProvider:      config.signatureProvider      ?? null,
             host:                   config.host                   ?? 'api.kylin.alohaeos.com',
-            web3:                   config.web3                   ?? new Web3, // TODO double check this, I think it should be something else.
+            web3:                   config.web3                   ?? null, // TODO double check this, I think it should be something else.
             apiKey:                 config.apiKey                 ?? '',
             secure:                 config.secure                 ?? false,
             authentication:         config.authentication         ?? false,
@@ -38,9 +36,9 @@ export const defaultConfiguration = (environment: string = 'testnet', config?: E
         // TODO add proper configuration values here.
         return {
             network:                config.network                ?? "mainnet",
-            signatureProvider:      config.signatureProvider      ?? new JsSignatureProvider(['5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr']),
+            signatureProvider:      config.signatureProvider      ?? null,
             host:                   config.host                   ?? 'eos.greymass.com',
-            web3:                   config.web3                   ?? new Web3, // TODO double check this, I think it should be something else.
+            web3:                   config.web3                   ?? null, // TODO double check this, I think it should be something else.
             apiKey:                 config.apiKey                 ?? '',
             secure:                 config.secure                 ?? false,
             authentication:         config.authentication         ?? false,
