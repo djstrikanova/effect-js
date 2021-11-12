@@ -27,7 +27,11 @@ module.exports = {
     }
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'index.umd.js',
     path: path.resolve(__dirname, 'dist'),
-  },
+    // path: './dist/',
+    libraryTarget: 'umd',
+    library: 'effectSdk',
+    umdNamedDefine: true,
+  }
 };
