@@ -2,7 +2,6 @@
   "name": "@effectai/effect-js",
   "version": "0.0.33",
   "description": "Effect Network Javscript/Typescript SDK (for [https://effect.network](https://effect.network))",
-  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "browser": "dist/bundle.umd.js",

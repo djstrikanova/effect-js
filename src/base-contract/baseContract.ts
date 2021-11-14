@@ -22,9 +22,9 @@ import { Signature } from 'eosjs/dist/eosjs-jssig';
 // import * as elliptic from 'elliptic';
 // import * as elliptic from 'elliptic/lib/elliptic/ec'
 // const elliptic = await import('elliptic');
-import elliptic from 'elliptic';
+// import elliptic from 'elliptic';
 // import { ec as elliptic } from 'elliptic';
-// import * as elliptic from 'elliptic'
+import * as elliptic from 'elliptic'
 // import { default as elliptic } from 'elliptic';
 const ec = new elliptic.default.ec('secp256k1');
 
