@@ -79,27 +79,50 @@
 				<a href="#quick-start" id="quick-start" style="color: inherit; text-decoration: none;">
 					<h1>Quick start</h1>
 				</a>
-				<pre><code><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">effectSdk</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;@effectai/effect-js&#039;</span><span style="color: #000000">)</span>
+				<pre><code><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">sdk</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">EffectClient</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;testnet&#039;</span><span style="color: #000000">)</span>
 
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">signatureProvider</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">JsSignatureProvider</span><span style="color: #000000">([</span><span style="color: #0070C1">PRIVATE_KEY</span><span style="color: #000000">])</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">options</span><span style="color: #000000"> = {</span>
-<span style="color: #000000">  </span><span style="color: #001080">network:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;kylin&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">  </span><span style="color: #001080">host:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://api.kylin.alohaeos.com&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">  </span><span style="color: #001080">signatureProvider:</span><span style="color: #000000"> </span><span style="color: #001080">signatureProvider</span>
+<span style="color: #008000">// Instantiating bsc account.</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">account</span><span style="color: #000000"> = </span><span style="color: #795E26">createAccount</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #008000">// leave empty to generate new private key</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;0x6f46d8d7c9684ed049c941758cb9186eb2b5758221a229e27861fe357edb770d&#039;</span>
+<span style="color: #000000">)</span>
+
+<span style="color: #008000">// Generate web3 instance from account with private key.</span>
+<span style="color: #008000">// Could also be the web3 object with a MetaMask connection etc.</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">web3</span><span style="color: #000000"> = </span><span style="color: #795E26">createWallet</span><span style="color: #000000">(</span><span style="color: #001080">account</span><span style="color: #000000">)</span>
+
+<span style="color: #008000">// Connect web3 account to SDK</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">effectAccount</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #795E26">connectAccount</span><span style="color: #000000">(</span><span style="color: #001080">web3</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">newCampaign</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">    </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Random Title&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">description:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Networked well-modulated instruction set&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">instructions:</span><span style="color: #000000"> </span><span style="color: #A31515">`American whole magazine truth stop whose.`</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">template:</span><span style="color: #000000"> </span><span style="color: #A31515">`&lt;div id=&quot;task&quot;&gt;</span>
+<span style="color: #A31515">                &lt;image src=&#039;`</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;${image_url}&#039;</span><span style="color: #000000"> + </span><span style="color: #A31515">`&#039;&gt;&lt;/image&gt;</span>
+<span style="color: #A31515">                &lt;h2&gt;Image Classification&lt;/h2&gt;</span>
+<span style="color: #A31515">                &lt;option submit name=&quot;button-answer&quot; type=&quot;button&quot; </span>
+<span style="color: #A31515">                  :options=&quot;[&#039;Cat&#039;,&#039;Dog&#039;,&#039;Mechanical Turk&#039;,&#039;Other&#039;]&quot; </span>
+<span style="color: #A31515">                  label=&quot;What do you see in the picture above?&quot;&gt;</span>
+<span style="color: #A31515">                &lt;/option&gt;</span>
+<span style="color: #A31515">              &lt;/div&gt;`</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreiggnttdaxleeii6cdt23i4e24pfcvzyrndf5kzfbqgf3fxjryj5s4&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">category:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Image Labeling&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">example_task:</span><span style="color: #000000"> {</span><span style="color: #A31515">&#039;image_url&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreidrxwhqsxa22uyjamz7qq3lh7pv2eg3ykodju6n7cgprmjpal2oga&#039;</span><span style="color: #000000">},</span>
+<span style="color: #000000">    </span><span style="color: #001080">version:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">reward:</span><span style="color: #000000"> </span><span style="color: #098658">10</span>
 <span style="color: #000000">}</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">sdk</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">effectSdk</span><span style="color: #000000">.</span><span style="color: #795E26">EffectClient</span><span style="color: #000000">(</span><span style="color: #001080">options</span><span style="color: #000000">);</span>
 
-<span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">account</span><span style="color: #000000">.</span><span style="color: #795E26">openAccount</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;account_name&#039;</span><span style="color: #000000">)</span>
-<span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">account</span><span style="color: #000000">.</span><span style="color: #795E26">getVAccountByName</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;account_name&#039;</span><span style="color: #000000">)</span>
+<span style="color: #008000">// Create campaign.</span>
+<span style="color: #008000">// campaign object, reward efx per task</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">makeCampaign</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">force</span><span style="color: #000000">.</span><span style="color: #795E26">makeCampaign</span><span style="color: #000000">(</span><span style="color: #001080">newCampaign</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;10&#039;</span><span style="color: #000000">)</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;makeCampaign&#039;</span><span style="color: #000000">, </span><span style="color: #001080">makeCampaign</span><span style="color: #000000">)</span>
 
-<span style="color: #008000">// from account, to vaccount, amount in **EFX**</span>
-<span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">account</span><span style="color: #000000">.</span><span style="color: #795E26">deposit</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;from_account_name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;to_vaccount_name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;1.0000&#039;</span><span style="color: #000000">)</span>
+<span style="color: #008000">// Get Campaigns</span>
+<span style="color: #008000">// nextKey, limit</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">campaigns</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">force</span><span style="color: #000000">.</span><span style="color: #795E26">getCampaigns</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">, </span><span style="color: #098658">100</span><span style="color: #000000">)</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Campaigns&#039;</span><span style="color: #000000">, </span><span style="color: #001080">campaigns</span><span style="color: #000000">)</span>
 
-<span style="color: #008000">// from vaccount, to account, amount in EFX</span>
-<span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">account</span><span style="color: #000000">.</span><span style="color: #795E26">withdraw</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;from_vaccount_name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;to_account_name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;1.0000&#039;</span><span style="color: #000000">)</span>
-
-<span style="color: #008000">// from vaccount, to vaccount, amount in EFX</span>
-<span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">account</span><span style="color: #000000">.</span><span style="color: #795E26">vtransfer</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;from_vaccount_name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;to_vaccount_name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;1.0000&#039;</span><span style="color: #000000">)</span>
 </code></pre>
 				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
 					<h1>Development</h1>
