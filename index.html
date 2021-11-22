@@ -61,88 +61,92 @@
 				<a href="#effect-js-🔥🔥🔥" id="effect-js-🔥🔥🔥" style="color: inherit; text-decoration: none;">
 					<h1>effect-js 🔥🔥🔥</h1>
 				</a>
-				<p>Javascript SDK for integration with <a href="https://effect.network">https://effect.network</a>
-					Take a look at our docs at the following link: <a href="https://effectai.github.io/developer-docs/">Docs</a>
-				The API reference is available here: <a href="https://effectai.github.io/effect-js/">SDK-Reference</a></p>
+				<p>Javascript SDK for integration with <a href="https://effect.network">https://effect.network</a><br>You can take a look at our docs at the following link: <a href="https://effectai.github.io/developer-docs/">Docs</a><br>The SDK reference is available here: <a href="https://effectai.github.io/effect-js/">SDK-Reference</a>  </p>
 				<a href="#✒️-installation" id="✒️-installation" style="color: inherit; text-decoration: none;">
 					<h1>✒️ Installation</h1>
 				</a>
 				<p>The official distribution for the package can is available at npm. <a href="https://www.npmjs.com/package/effect-js">npm</a></p>
-				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> --</span><span style="color: #001080">save</span><span style="color: #000000"> @</span><span style="color: #001080">effectai</span><span style="color: #000000">/</span><span style="color: #001080">effect</span><span style="color: #000000">-</span><span style="color: #001080">js</span>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> @</span><span style="color: #001080">effectai</span><span style="color: #000000">/</span><span style="color: #001080">effect</span><span style="color: #000000">-</span><span style="color: #001080">js</span>
 </code></pre>
 				<a href="#quick-start" id="quick-start" style="color: inherit; text-decoration: none;">
 					<h1>Quick start</h1>
 				</a>
-				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">sdk</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">EffectClient</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;testnet&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-javascript"><span style="color: #008000">//Require, import also available</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">effectsdk</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;@effectai/effect-js&#039;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">effectsdk</span><span style="color: #000000">.</span><span style="color: #795E26">EffectClient</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;testnet&#039;</span><span style="color: #000000">)</span>
 
 <span style="color: #008000">// Instantiating bsc account.</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">account</span><span style="color: #000000"> = </span><span style="color: #795E26">createAccount</span><span style="color: #000000">(</span>
-<span style="color: #000000">    </span><span style="color: #008000">// leave empty to generate new private key</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">account</span><span style="color: #000000"> = </span><span style="color: #001080">effectsdk</span><span style="color: #000000">.</span><span style="color: #795E26">createAccount</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #008000">// leave empty to generate new private key, or use existing private</span>
 <span style="color: #000000">    </span><span style="color: #A31515">&#039;0x6f46d8d7c9684ed049c941758cb9186eb2b5758221a229e27861fe357edb770d&#039;</span>
 <span style="color: #000000">)</span>
 
 <span style="color: #008000">// Generate web3 instance from account with private key.</span>
 <span style="color: #008000">// Could also be the web3 object with a MetaMask connection etc.</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">web3</span><span style="color: #000000"> = </span><span style="color: #795E26">createWallet</span><span style="color: #000000">(</span><span style="color: #001080">account</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">web3</span><span style="color: #000000"> = </span><span style="color: #001080">effectsdk</span><span style="color: #000000">.</span><span style="color: #795E26">createWallet</span><span style="color: #000000">(</span><span style="color: #001080">account</span><span style="color: #000000">)</span>
 
-<span style="color: #008000">// Connect web3 account to SDK</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">effectAccount</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #795E26">connectAccount</span><span style="color: #000000">(</span><span style="color: #001080">web3</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">main</span><span style="color: #000000"> = </span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// Connect web3 account to SDK</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">effectAccount</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #795E26">connectAccount</span><span style="color: #000000">(</span><span style="color: #001080">web3</span><span style="color: #000000">);</span>
 
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">newCampaign</span><span style="color: #000000"> = {</span>
-<span style="color: #000000">    </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Random Title&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">description:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Networked well-modulated instruction set&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">instructions:</span><span style="color: #000000"> </span><span style="color: #A31515">`American whole magazine truth stop whose.`</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">template:</span><span style="color: #000000"> </span><span style="color: #A31515">`&lt;div id=&quot;task&quot;&gt;</span>
-<span style="color: #A31515">                &lt;image src=&#039;`</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;${image_url}&#039;</span><span style="color: #000000"> + </span><span style="color: #A31515">`&#039;&gt;&lt;/image&gt;</span>
-<span style="color: #A31515">                &lt;h2&gt;Image Classification&lt;/h2&gt;</span>
-<span style="color: #A31515">                &lt;option submit name=&quot;button-answer&quot; type=&quot;button&quot; </span>
-<span style="color: #A31515">                  :options=&quot;[&#039;Cat&#039;,&#039;Dog&#039;,&#039;Mechanical Turk&#039;,&#039;Other&#039;]&quot; </span>
-<span style="color: #A31515">                  label=&quot;What do you see in the picture above?&quot;&gt;</span>
-<span style="color: #A31515">                &lt;/option&gt;</span>
-<span style="color: #A31515">              &lt;/div&gt;`</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreiggnttdaxleeii6cdt23i4e24pfcvzyrndf5kzfbqgf3fxjryj5s4&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">category:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Image Labeling&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">example_task:</span><span style="color: #000000"> {</span><span style="color: #A31515">&#039;image_url&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreidrxwhqsxa22uyjamz7qq3lh7pv2eg3ykodju6n7cgprmjpal2oga&#039;</span><span style="color: #000000">},</span>
-<span style="color: #000000">    </span><span style="color: #001080">version:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">reward:</span><span style="color: #000000"> </span><span style="color: #098658">10</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">newCampaign</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">      </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Random Title&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">description:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Networked well-modulated instruction set&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">instructions:</span><span style="color: #000000"> </span><span style="color: #A31515">`American whole magazine truth stop whose.`</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">template:</span><span style="color: #000000"> </span><span style="color: #A31515">`&lt;div id=&quot;task&quot;&gt;</span>
+<span style="color: #A31515">                  &lt;image src=&#039;`</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;${image_url}&#039;</span><span style="color: #000000"> + </span><span style="color: #A31515">`&#039;&gt;&lt;/image&gt;</span>
+<span style="color: #A31515">                  &lt;h2&gt;Image Classification&lt;/h2&gt;</span>
+<span style="color: #A31515">                  &lt;option submit name=&quot;button-answer&quot; type=&quot;button&quot; </span>
+<span style="color: #A31515">                    :options=&quot;[&#039;Cat&#039;,&#039;Dog&#039;,&#039;Mechanical Turk&#039;,&#039;Other&#039;]&quot; </span>
+<span style="color: #A31515">                    label=&quot;What do you see in the picture above?&quot;&gt;</span>
+<span style="color: #A31515">                  &lt;/option&gt;</span>
+<span style="color: #A31515">                &lt;/div&gt;`</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreiggnttdaxleeii6cdt23i4e24pfcvzyrndf5kzfbqgf3fxjryj5s4&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">category:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Image Labeling&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">example_task:</span><span style="color: #000000"> {</span><span style="color: #A31515">&#039;image_url&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreidrxwhqsxa22uyjamz7qq3lh7pv2eg3ykodju6n7cgprmjpal2oga&#039;</span><span style="color: #000000">},</span>
+<span style="color: #000000">      </span><span style="color: #001080">version:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">reward:</span><span style="color: #000000"> </span><span style="color: #098658">10</span>
+<span style="color: #000000">  }</span>
+
+<span style="color: #000000">  </span><span style="color: #008000">// Create campaign.</span>
+<span style="color: #000000">  </span><span style="color: #008000">// campaign object, reward efx per task</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">makeCampaign</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">force</span><span style="color: #000000">.</span><span style="color: #795E26">makeCampaign</span><span style="color: #000000">(</span><span style="color: #001080">newCampaign</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;10&#039;</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;makeCampaign&#039;</span><span style="color: #000000">, </span><span style="color: #001080">makeCampaign</span><span style="color: #000000">)</span>
+
+<span style="color: #000000">  </span><span style="color: #008000">// Get Campaigns</span>
+<span style="color: #000000">  </span><span style="color: #008000">// nextKey, limit</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">campaigns</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">force</span><span style="color: #000000">.</span><span style="color: #795E26">getMyLastCampaign</span><span style="color: #000000">()</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Campaigns&#039;</span><span style="color: #000000">, </span><span style="color: #001080">campaigns</span><span style="color: #000000">)</span>
 <span style="color: #000000">}</span>
 
-<span style="color: #008000">// Create campaign.</span>
-<span style="color: #008000">// campaign object, reward efx per task</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">makeCampaign</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">force</span><span style="color: #000000">.</span><span style="color: #795E26">makeCampaign</span><span style="color: #000000">(</span><span style="color: #001080">newCampaign</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;10&#039;</span><span style="color: #000000">)</span>
-<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;makeCampaign&#039;</span><span style="color: #000000">, </span><span style="color: #001080">makeCampaign</span><span style="color: #000000">)</span>
-
-<span style="color: #008000">// Get Campaigns</span>
-<span style="color: #008000">// nextKey, limit</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">campaigns</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">sdk</span><span style="color: #000000">.</span><span style="color: #001080">force</span><span style="color: #000000">.</span><span style="color: #795E26">getCampaigns</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">, </span><span style="color: #098658">100</span><span style="color: #000000">)</span>
-<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Campaigns&#039;</span><span style="color: #000000">, </span><span style="color: #001080">campaigns</span><span style="color: #000000">)</span>
+<span style="color: #795E26">main</span><span style="color: #000000">()</span>
 
 </code></pre>
 				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
 					<h1>Development</h1>
 				</a>
-				<p>The best way to get to know how this module works, is by adding features while you can run it. So there are some examples provided to provide an idea how to create transaction with the Effect Network.</p>
+				<p>The best way to get to know how this module works is by adding features while you can run it. So there are some examples provided to provide an idea of how to create a transaction with the Effect Network.</p>
 				<p>Clone the project</p>
 				<pre><code><span style="color: #001080">git</span><span style="color: #000000"> </span><span style="color: #001080">clone</span><span style="color: #000000"> </span><span style="color: #001080">git</span><span style="color: #000000">@</span><span style="color: #001080">github</span><span style="color: #000000">.</span><span style="color: #001080">com</span><span style="color: #000000">:</span><span style="color: #001080">dfuse</span><span style="color: #000000">-</span><span style="color: #001080">io</span><span style="color: #000000">/</span><span style="color: #001080">client</span><span style="color: #000000">-</span><span style="color: #001080">js</span><span style="color: #000000">.</span><span style="color: #001080">git</span>
 </code></pre>
 				<p>Install dependencies and dev-dependencies</p>
 				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span>
 </code></pre>
-				<p>It is now possible to start compiling the typescript files to the module spec of your choice, for now the following module spec&#39;s are supported: [ESM, CommonJS, UMD]</p>
+				<p>It is now possible to start compiling the typescript files to the module spec of your choice, for now, the following module spec&#39;s are supported: [ESM, CommonJS, UMD]</p>
 				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">run</span><span style="color: #000000"> build:</span><span style="color: #001080">cjs</span><span style="color: #000000"> # </span><span style="color: #001080">commonjs</span>
 <span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">run</span><span style="color: #000000"> build:</span><span style="color: #001080">esm</span><span style="color: #000000"> # </span><span style="color: #001080">esm</span>
 <span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">run</span><span style="color: #000000"> build:</span><span style="color: #001080">umd</span><span style="color: #000000"> # </span><span style="color: #001080">umd</span>
 </code></pre>
-				<p>Link it. Now it is possible to use <code>npm link</code> in order to link the compiled typescript code to your own project. From the directory of your project run the following command.</p>
+				<p>Link it. Now it is possible to use <code>npm link</code> in order to link the compiled typescript code to your own project, from the directory of your project, run the following command.</p>
 				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">link</span><span style="color: #000000"> /</span><span style="color: #001080">path</span><span style="color: #000000">/</span><span style="color: #001080">to</span><span style="color: #000000">/</span><span style="color: #001080">effect</span><span style="color: #000000">-</span><span style="color: #001080">js</span><span style="color: #000000">/</span>
 </code></pre>
-				<p>From your project folder you should be able to import the compiled code from <code>effect-js</code>. Depending on your environment use <code>import</code> or <code>require</code> as needed.</p>
+				<p>From your project folder, you should be able to import the compiled code from <code>effect-js</code>. Depending on your environment, use <code>import</code> or <code>require</code> as needed.</p>
 				<a href="#publishing" id="publishing" style="color: inherit; text-decoration: none;">
 					<h1>Publishing</h1>
 				</a>
-				<p>Run the following command to, build the source, increment the version, and publish the <code>dist</code> transpiled code and types to the npm repository, assuming you have the correct credentials.</p>
-				<p>Make sure the git is clean and everything has been committed, and run the following.</p>
-				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">run</span><span style="color: #000000"> publish:</span><span style="color: #001080">latest</span>
+				<p>Run the following command to build the source, increment the version, and publish the <code>dist</code> transpiled code and types to the npm repository, assuming you have the correct credentials.</p>
+				<p>Make sure the git is clean, and everything has been committed, and run the following.</p>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">run</span><span style="color: #000000"> publish:</span><span style="color: #001080">public</span>
 </code></pre>
 				<p>Running <code>publish:next</code> will publish a pre-release of the sdk to the npm repository. Users will need to explicitly opt-in in order to use it.</p>
 				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">run</span><span style="color: #000000"> publish:</span><span style="color: #001080">next</span>
