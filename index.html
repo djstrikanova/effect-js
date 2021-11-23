@@ -94,14 +94,18 @@
 <span style="color: #000000">      </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Random Title&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">      </span><span style="color: #001080">description:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Networked well-modulated instruction set&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">      </span><span style="color: #001080">instructions:</span><span style="color: #000000"> </span><span style="color: #A31515">`American whole magazine truth stop whose.`</span><span style="color: #000000">,</span>
-<span style="color: #000000">      </span><span style="color: #001080">template:</span><span style="color: #000000"> </span><span style="color: #A31515">`&lt;div id=&quot;task&quot;&gt;</span>
-<span style="color: #A31515">                  &lt;image src=&#039;`</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;${image_url}&#039;</span><span style="color: #000000"> + </span><span style="color: #A31515">`&#039;&gt;&lt;/image&gt;</span>
-<span style="color: #A31515">                  &lt;h2&gt;Image Classification&lt;/h2&gt;</span>
-<span style="color: #A31515">                  &lt;option submit name=&quot;button-answer&quot; type=&quot;button&quot; </span>
-<span style="color: #A31515">                    :options=&quot;[&#039;Cat&#039;,&#039;Dog&#039;,&#039;Mechanical Turk&#039;,&#039;Other&#039;]&quot; </span>
-<span style="color: #A31515">                    label=&quot;What do you see in the picture above?&quot;&gt;</span>
-<span style="color: #A31515">                  &lt;/option&gt;</span>
-<span style="color: #A31515">                &lt;/div&gt;`</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">template:</span><span style="color: #000000"> </span><span style="color: #A31515">`&lt;div&gt;</span>
+<span style="color: #A31515">                &lt;image src=&#039;`</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;${image_url}&#039;</span><span style="color: #000000"> + </span><span style="color: #A31515">`&#039;&gt;&lt;/image&gt;</span>
+<span style="color: #A31515">                &lt;h2&gt;What do you see in the picture above? 🐸&lt;/h2&gt;</span>
+<span style="color: #A31515">                &lt;input type=&#039;radio&#039; name=&#039;radio-answer&#039; id=&quot;original&quot; label=&#039;&#039;&gt;Stars 🤩&lt;/input&gt;&lt;br&gt;</span>
+<span style="color: #A31515">                &lt;input type=&#039;radio&#039; name=&#039;radio-answer&#039; id=&quot;original&quot; label=&#039;&#039;&gt;Mechanical Turk 😏&lt;/input&gt;&lt;br&gt;</span>
+<span style="color: #A31515">                &lt;input type=&#039;radio&#039; name=&#039;radio-answer&#039; id=&quot;original&quot; label=&#039;&#039;&gt;Dog 🤐&lt;/input&gt; &lt;br&gt;</span>
+<span style="color: #A31515">                &lt;input type=&#039;radio&#039; name=&#039;radio-answer&#039; id=&quot;original&quot; label=&#039;&#039;&gt;Cat 😵&lt;/input&gt;&lt;br&gt;</span>
+<span style="color: #A31515">                &lt;hr&gt;</span>
+<span style="color: #A31515">                &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt; </span>
+<span style="color: #A31515">              &lt;/div&gt;</span>
+<span style="color: #A31515">              &lt;script&gt;&lt;/script&gt;</span>
+<span style="color: #A31515">              &lt;style&gt;&lt;/style&gt;`</span><span style="color: #000000">,      </span>
 <span style="color: #000000">      </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreiggnttdaxleeii6cdt23i4e24pfcvzyrndf5kzfbqgf3fxjryj5s4&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">      </span><span style="color: #001080">category:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Image Labeling&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">      </span><span style="color: #001080">example_task:</span><span style="color: #000000"> {</span><span style="color: #A31515">&#039;image_url&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://ipfs.effect.ai/ipfs/bafkreidrxwhqsxa22uyjamz7qq3lh7pv2eg3ykodju6n7cgprmjpal2oga&#039;</span><span style="color: #000000">},</span>
