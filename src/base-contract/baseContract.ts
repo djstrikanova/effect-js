@@ -124,6 +124,19 @@ export class BaseContract {
     this.effectAccount = effectAccount
   }
 
+  importPrivateKey = async (key: string): Promise<string> => {
+    const account = this.web3.eth.accounts.privateKeyToAccount(key)
+
+    if (account.address === this.effectAccount.address) {
+      const privateKey = key.slice(0,2) === '0x' ? key : '0x' + key
+      this.effectAccount.privateKey = privateKey
+    } else {
+      this.effectAccount.privateKey = null
+      throw new Error('Private key doesnt match public key')
+    }
+    return this.effectAccount.privateKey
+  }
+
   /**
    * Recover BSC public key from signed message
    * @param message
