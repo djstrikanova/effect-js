@@ -12,6 +12,7 @@ import { isBscAddress } from '../utils/bscAddress'
 import { nameToHex } from '../utils/hex'
 import { vAccountRow } from '../types/vAccountRow';
 import { TransactResult } from 'eosjs/dist/eosjs-api-interfaces';
+const { JsSignatureProvider } = require('eosjs/dist/eosjs-jssig');
 
 const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
@@ -124,15 +125,24 @@ export class BaseContract {
     this.effectAccount = effectAccount
   }
 
-  importPrivateKey = async (key: string): Promise<string> => {
-    const account = this.web3.eth.accounts.privateKeyToAccount(key)
-
-    if (account.address === this.effectAccount.address) {
-      const privateKey = key.slice(0,2) === '0x' ? key : '0x' + key
-      this.effectAccount.privateKey = privateKey
-    } else {
-      this.effectAccount.privateKey = null
-      throw new Error('Private key doesnt match public key')
+  importPrivateKey = async (key: string, chain:string): Promise<string> => {
+    if (chain === 'bsc') {
+      const web3 = new Web3();
+      const account = web3.eth.accounts.privateKeyToAccount(key)
+      if (account.address === this.effectAccount.address) {
+        const privateKey = key.slice(0,2) === '0x' ? key : '0x' + key
+        this.effectAccount.privateKey = privateKey
+        console.log('effectAccount', this.effectAccount.privateKey)
+      } else {
+        this.effectAccount.privateKey = null
+        throw new Error('Private key doesnt match public key')
+      }
+    } else if (chain === 'eos') {
+      console.log('lets go eos')
+      // const provider = new JsSignatureProvider([key])
+      // this.api = new Api({ rpc: this.rpc, signatureProvider: provider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() })
+      // await this.setSignatureProvider(this.effectAccount, this.api, null)
+      // await this.setSignatureProvider(this.effectAccount, this.api, null)
     }
     return this.effectAccount.privateKey
   }
