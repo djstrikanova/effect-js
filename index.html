@@ -156,7 +156,7 @@
 				<p>Install dependencies and dev-dependencies</p>
 				<pre><code class="language-bash"><span style="color: #000000">npm install</span>
 </code></pre>
-				<p>It is now possible to start compiling the typescript files to the module spec of your choice, for now, the following module spec&#39;s are supported: [ESM, CommonJS, UMD]</p>
+				<p>It is now possible to start compiling the typescript files to the module spec of your choice, for now, the following module specs are supported: [ESM, CommonJS, UMD]</p>
 				<pre><code class="language-bash"><span style="color: #000000">npm run build:cjs </span><span style="color: #008000"># commonjs</span>
 <span style="color: #000000">npm run build:esm </span><span style="color: #008000"># esm</span>
 <span style="color: #000000">npm run build:umd </span><span style="color: #008000"># umd</span>
@@ -165,6 +165,24 @@
 				<pre><code class="language-bash"><span style="color: #000000">npm link /path/to/effect-js/</span>
 </code></pre>
 				<p>From your project folder, you should be able to import the compiled code from <code>effect-js</code>. Depending on your environment, use <code>import</code> or <code>require</code> as needed.</p>
+				<a href="#🧪-testing" id="🧪-testing" style="color: inherit; text-decoration: none;">
+					<h1>🧪 Testing</h1>
+				</a>
+				<p>The testing framework used for this project is <a href="https://jestjs.io/docs/api">Jest</a>. It is possible to run the tests with the following command. The tests are available in the <code>test</code> directory.
+				Remember to copy the <code>.env.test.example</code> file to <code>.env.test</code> and fill in the values for your environment.</p>
+				<p>Run the tests in the <code>test</code> directory with the <code>kylin</code> environment, for now it is configured to only run unit tests. </p>
+				<pre><code class="language-bash"><span style="color: #000000">npm run </span><span style="color: #795E26">test</span>
+</code></pre>
+				<p>For more fine grained control of the test execution, you can use the following command.</p>
+				<pre><code class="language-bash"><span style="color: #008000"># Run all tests and watch</span>
+<span style="color: #000000">npm run test:watch</span>
+
+<span style="color: #008000"># Run e2e tests</span>
+<span style="color: #000000">npm run test:e2e</span>
+
+<span style="color: #008000"># Run unit tests</span>
+<span style="color: #000000">npm run test:unit</span>
+</code></pre>
 				<a href="#🗞-publishing" id="🗞-publishing" style="color: inherit; text-decoration: none;">
 					<h1>🗞 Publishing</h1>
 				</a>
