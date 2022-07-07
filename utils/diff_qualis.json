@@ -1,0 +1,148 @@
+{
+    "data": [
+        {
+          "err": {
+            "name": "ES Translation Validator",
+            "description": "ES Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": null
+          },
+          "cor": { "name": "ES Translation Validator", "id": 203 }
+        },
+        {
+          "err": {
+            "name": "ZH Translation Validator",
+            "description": "ZH Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 203
+          },
+          "cor": { "name": "ZH Translation Validator", "id": 205 }
+        },
+        {
+          "err": {
+            "name": "PT Translation Validator",
+            "description": "PT Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 205
+          },
+          "cor": { "name": "PT Translation Validator", "id": 206 }
+        },
+        {
+          "err": {
+            "name": "RU Translation Validator",
+            "description": "RU Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 206
+          },
+          "cor": { "name": "RU Translation Validator", "id": 207 }
+        },
+        {
+          "err": {
+            "name": "ES Translation Master Validator",
+            "description": "ES Translation Master Validator. User is expertly proficient in checking others` work and making corrections. ",
+            "id": 207
+          },
+          "cor": { "name": "ES Translation Master Validator", "id": 223 }
+        },
+        {
+          "err": {
+            "name": "ZH Translaiton Master Validator",
+            "description": "ZH Translaiton Master Validator. User is expertly proficient in checking others` work and making corrections. ",
+            "id": 223
+          },
+          "cor": { "name": "ZH Translaiton Master Validator", "id": 226 }
+        },
+        {
+          "err": {
+            "name": "RU Translation Master Validator",
+            "description": "RU Translation Master Validator. User is expertly proficient in checking others` work and making corrections. ",
+            "id": 226
+          },
+          "cor": { "name": "RU Translation Master Validator", "id": 225 }
+        },
+        {
+          "err": {
+            "name": "PT Translation Master Validator",
+            "description": "PT Translation Master Validator. User is expertly proficient in checking others` work and making corrections. ",
+            "id": 225
+          },
+          "cor": { "name": "PT Translation Master Validator", "id": 224 }
+        },
+        {
+          "err": {
+            "name": "NL Translation Validator",
+            "description": "NL Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 224
+          },
+          "cor": { "name": "NL Translation Validator", "id": 284 }
+        },
+        {
+          "err": {
+            "name": "ID Translation Validator",
+            "description": "ID Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 284
+          },
+          "cor": { "name": "ID Translation Validator", "id": 285 }
+        },
+        {
+          "err": {
+            "name": "PL Translation Validator",
+            "description": "PL Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 285
+          },
+          "cor": { "name": "PL Translation Validator", "id": 286 }
+        },
+        {
+          "err": {
+            "name": "FR Translation Validator",
+            "description": "FR Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 286
+          },
+          "cor": { "name": "FR Translation Validator", "id": 287 }
+        },
+        {
+          "err": {
+            "name": "IT Translation Validator",
+            "description": "IT Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 287
+          },
+          "cor": { "name": "IT Translation Validator", "id": 288 }
+        },
+        {
+          "err": {
+            "name": "AR Translation Validator",
+            "description": "AR Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 288
+          },
+          "cor": { "name": "AR Translation Validator", "id": 289 }
+        },
+        {
+          "err": {
+            "name": "Translation Master Validator",
+            "description": "Translation Master Validator. User is expertly proficient in checking others` work and making corrections. ",
+            "id": 289
+          },
+          "cor": { "name": "Translation Master Validator", "id": 290 }
+        },
+        {
+          "err": {
+            "name": "Subtitle Master Validator",
+            "description": "Subtitle Master Validator. User is expertly proficient in checking others` work and making corrections. ",
+            "id": 290
+          },
+          "cor": { "name": "Subtitle Master Validator", "id": 292 }
+        },
+        {
+          "err": {
+            "name": "DE Translation Validator",
+            "description": "DE Translation Validator. User is proficient in checking others` work and validating for correctness. ",
+            "id": 292
+          },
+          "cor": { "name": "DE Translation Validator", "id": 326 }
+        },
+        {
+          "err": {
+            "name": "Closed Caption Test (Open Book)",
+            "description": "Closed Caption Test (Open Book). User has familiarity in the captioning process and basic rules. ",
+            "id": 326
+          },
+          "cor": { "name": "Closed Caption Test (Open Book)", "id": 329 }
+        }
+      ]
+}

@@ -1264,14 +1264,20 @@ export class Force extends BaseContract {
     }
 
     if (isBscAddress(owner)) {
+      /**
+       * (defn pack-editquali-params [acc-id content]
+            (.asUint8Array
+            (doto (new (.-SerialBuffer Serialize))
+              (.push 20)  (.pushUint32 acc-id) (.push 0) (.pushString content))))
+       */
       const serialbuff = new Serialize.SerialBuffer()
-      serialbuff.push(18)
+      serialbuff.push(20)
       serialbuff.pushUint32(accountId)
       serialbuff.push(0)
       serialbuff.pushString(hash)
 
       sig = await this.generateSignature(serialbuff)
-      // console.log('Signature generated', sig)
+      console.log('Signature generated', sig)
     }
 
     const action = {
@@ -1466,6 +1472,32 @@ export class Force extends BaseContract {
 
     return qualifications;
   }
+
+  /**
+   * Get all user qualis
+   */
+  getAllUserQualis = async (nextKey, limit = 100, processQualification: boolean = true): Promise<GetTableRowsResult> => {
+    const config = {
+      code: this.config.forceContract, 
+      scope: this.config.forceContract,
+      table: 'userquali',
+      limit: 100, // temp fix until pagination
+      lower_bound: undefined
+    }
+
+    if (nextKey) {
+      config.lower_bound = nextKey
+    }
+    
+    const qualifications = await this.api.rpc.get_table_rows(config)
+    
+    if(processQualification) {
+      for (let i = 0; i < qualifications.rows.length; i++) {
+        qualifications.rows[i] = await this.processQualification(qualifications.rows[i])
+        }
+    }
+    return qualifications;
+  } 
 
   /**
    * processQualification

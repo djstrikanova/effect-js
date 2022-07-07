@@ -3,7 +3,7 @@ const fs = require('fs')
 const dotenv = require('dotenv')
 const { EffectClient, createAccount, createWallet } = require('../dist/lib')
 const { connectEosAccount, connectBscAccount } = require('./connect_efx_account.js')
-const { old_qualis, example_qualis } = require('./old_qualificaitons').old_qualis
+const { old_qualis, example_qualis } = require('./error_correct_qualis').old_qualis
 
 // Initialize Config
 dotenv.config({path: '.env'})
@@ -40,26 +40,27 @@ async function main () {
         const accountid = sdk.effectAccount.vAccountRows[0].id
 
         // fs read json file
-        const json_file = fs.readFileSync('./qualis.json', 'utf8')
-        const qualis = JSON.parse(json_file)
-        console.log(' qualis', qualis)
+        // const json_file = fs.readFileSync('./new_quali.json', 'utf8')
+        // const qualis = JSON.parse(json_file)
+        const new_qualis = require('./new_quali.json')
+        // console.log(' qualis', qualis)
 
         const map = []
 
         for (oldqual of old_qualis) {
-            for (newqual of qualis) {
+            for (newqual of new_qualis) {
                 if (oldqual.name === newqual.info.name && oldqual.old_id) {
                     oldqual.new_id = newqual.id
                     oldqual.new_name = newqual.info.name
-                    map.push([oldqual.old_id, newqual.id])
+                    map.push([oldqual.old_id, oldqual.name, newqual.id, newqual.info.name])
                 }
             }
         }
 
-        console.log(old_qualis)
-        console.log(map)
-
-
+        // write map to json file
+        const map_json = JSON.stringify(map, null, 2)
+        console.log('map_json', map_json)
+        fs.writeFileSync('./map.json', map_json)
 
 
         console.log('🔥 Script finished.')

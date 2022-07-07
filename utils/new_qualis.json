@@ -1,0 +1,721 @@
+{ "data": [
+  {
+    "id": 6,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmddUgWN8Ek9QzCiVHRXtr7MsgM3zFeZS9RDGYWT6E5dnb"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Beta Tester",
+      "description": null,
+      "image": "https://worker.effect.ai/static/badges/beta_tester.svg",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 115,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmPaWYt4jL3gVvUm2KrUkKoouWVNgxQTAN96WDCAaefgzG"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Force Qualifier: Image Classification",
+      "description": "Basic Image Classification Proficiency. User demonstrates ability to sort and identify objects in images.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 7,
+    "content": {
+      "field_0": 0,
+      "field_1": "Qmf6ZHAYY1JMwKwQ3qGJip8pdgrEjQTfKZ5zBnJxGvJNc6"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Basic English Proficiency",
+      "description": "Basic English Proficiency. User demonstrates command and use of English language in a conversational manner. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 9,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmSZGi8SyBtG1LofzfV7s4x6TAuHFYPw4ibocNicfZZX8x"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "English (US) Proofreading",
+      "description": "English US Proofreader. User has a high to expert level of English language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 11,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmQQZWxjhGDeeY4kSQsE5YD6eJczgwf18HCkbeACC6c4r4"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Chinese (Simplified) Translation/Proofreading",
+      "description": "Chinese Language Translator/Proofreader. User has a high to expert level of Simplified Chinese language skills and a mastery of correct characters, radicals, proper structure, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 13,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmUFkKFDd8uN3C9UhkFfJeCBGES1iCY59zMpcQQdiSfUK5"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Indonesian Translation/Proofreading",
+      "description": "Bahasa Indonesia Translator/Proofreader. User has a high to expert level of Bahasa Indonesia language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 15,
+    "content": {
+      "field_0": 0,
+      "field_1": "Qmac5YCSnGCMixVND4hFXqiuwzvLtTVzdsLtYVFrQhSsF9"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Arabic Translation/Proofreading",
+      "description": "Arabic Translator/Proofreader. User has a high to expert level of Modern Standard Arabic skills and a master of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 17,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmUKD6U7YBRzZbT8YJK7bWvrsTb3pmT2FgmzvFLKrRqUAF"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Spanish Translation/Proofreading",
+      "description": "Spanish (EU) Translator/Proofreader. User has a high to expert level of European Spanish language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 19,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmZtNjtqNJRMeYr2QsConsQuJLmLrEXeoJz5RfYV3asLez"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Portuguese (Brazilian) Translation/Proofreading",
+      "description": "Portguese (Brazilian) Translator/Proofreader. User has a high to expert level of Brazilian Portuguese language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 21,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmY885mft2VW3UCQDCx7TZvLe7MsSsaFCPB11P9R3kJ73k"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Italian Translation/Proofreading",
+      "description": "Italian Translator/Proofreader. User has a high to expert level of Italian language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 23,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmaMzdTUptFg2xPgR6fVkDiWx59hyJfrZdhgnb7SVwvoSB"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "German Translation/Proofreading",
+      "description": "German Translator/Proofreader. User has a high to expert level of German language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 25,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmNpjk7kZinSkgV7eP6oMdoVfQkGy2HWQ1bZFohqCxzfo5"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "French Translation/Proofreading",
+      "description": "French Translator/Proofreader. User has a high to expert level of French language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 27,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmauhQQjfBWYyLvo8M2YRhj7dfTfJLvHeLKNWXUiDaa7L4"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Polish Translation/Proofreading",
+      "description": "Polish Translator/Proofreader. User has a high to expert level of Polish language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 29,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmUf3qhg47yn7rpcYkMnC6TdUCfsFNRatjiWWv15aJa4JC"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Dutch Translation/Proofreading",
+      "description": "Dutch Translator/Proofreader. User has a high to expert level of Dutch language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 31,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmUDMEko8EhmLGhppNP7JxznP3SfYi145FCpAeyD1ZEVHj"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Georgian Translation/Proofreading",
+      "description": "Georgian Translator/Proofreader. User has a high to expert level of Georgian language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 33,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmeJrg6ApKbKF4qniYx9MrMCGrWDqyoWPWCQYuBYFudFa1"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Russian Translation/Proofreading",
+      "description": "Russian Translator/Proofreader. User has a high to expert level of Russian language skills and a mastery of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 55,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmdN4wyB7CLujJAiz6rhNVHGNrna2XgmdQBamkbQSmCYZM"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "ZH Translation Validator",
+      "description": "ZH Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 57,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmXtzJFpqZow3amchU8GdeirmgGqjNWxnNwQC8QqPL58Zp"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "PT Translation Validator",
+      "description": "PT Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 59,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmPNehywPhBePZv7KCjQ6fmAShAkR5AKSbt7QbF13SYS26"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "RU Translation Validator",
+      "description": "RU Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 61,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmbL7F9x88W1QC2CTnhGLAxG8iDbSYhqZrNzya5H36Sets"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "ES Translation Master Validator",
+      "description": "ES Translation Master Validator. User is expertly proficient in checking others` work and making corrections.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 63,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmbWwbxwqRSNz3enRa8H1EmscfH82YLDH7imQvR5ng3Qyq"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "ZH Translaiton Master Validator",
+      "description": "ZH Translaiton Master Validator. User is expertly proficient in checking others` work and making corrections.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 65,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmbDytRiB5sWh8YrXjLmFx7vqj67CJy4tCAUDzqJhgRqKB"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "RU Translation Master Validator",
+      "description": "RU Translation Master Validator. User is expertly proficient in checking others` work and making corrections.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 67,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmY3RpQwRYShEXeuKjikuSaVo9b7Z4oFV9nQUAHGmdyui3"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "PT Translation Master Validator",
+      "description": "PT Translation Master Validator. User is expertly proficient in checking others` work and making corrections.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 69,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmYtxBJbZumWZaxJZr3bVnasMMSJzF6PSyAHufoVajcWGS"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "NL Translation Validator",
+      "description": "NL Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 71,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmfJiStKsofHZmXVTzBAJv4nuGYkkRTyv7gaqv4LuW65Za"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "ID Translation Validator",
+      "description": "ID Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 73,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmTD7XDPUHyYCGaqyWSnF6fzWQq1HHcA6qvFGNUJ7SYe7T"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "PL Translation Validator",
+      "description": "PL Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 75,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmYcY1nYVAvhBn9fid1fpiDfxqEARPXGoSx3taFuRcggVL"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "FR Translation Validator",
+      "description": "FR Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 77,
+    "content": {
+      "field_0": 0,
+      "field_1": "Qmd4ewQvV4R9BGuti2fB9iCoK7i3zNRuAXdi1w6F1PfJGo"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "IT Translation Validator",
+      "description": "IT Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 79,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmPgG8jQ9A9qpFzDUkUb95P6Tg2snLWjcJ77V6ur6qzDvj"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "AR Translation Validator",
+      "description": "AR Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 81,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmYKWUz8aLjR9rjjiFu6vk6s3psUZjtXXGTAzKzckjk8C6"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Translation Master Validator",
+      "description": "Translation Master Validator. User is expertly proficient in checking others` work and making corrections.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 83,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmY6Js4xhgxcUgxkxb71BNPe5Mvde1bSpBsNbZBezaBis3"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Subtitle Master Validator",
+      "description": "Subtitle Master Validator. User is expertly proficient in checking others` work and making corrections.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 85,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmSuptd3WwSzmpagLUwWPrWUTauD6LhNg8B4oYXZJE1vgF"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "DE Translation Validator",
+      "description": "DE Translation Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 87,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmPuyRfeP5qajNvDzsa6fszdaaADhrbNpq3PTTn3thUoTu"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Closed Caption Test (Open Book)",
+      "description": "Closed Caption Test (Open Book). User has familiarity in the captioning process and basic rules.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 89,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmcPcJS4jCb6xDJWXHSN4cEVpNHb6fUqnrVHTPmEhwPRyj"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Effect FORCE Captioner",
+      "description": "Effect FORCE Captioner. User has demonstrated they are proficient in closed caption creation, proofreading, and editing in accordance to closed captioning best practices.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 91,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmSS9rjdVgiBdLs5Lk8jz7damn1cpsZeJaqbJmW37DZ96G"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "KHMS Translator",
+      "description": "KHMS Translator. User has completed requirements in order to complete tasks for KH. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 105,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmYR42Nms2AsTm7o4hWFo8MokCc8yhH22qb3vwFGDmZPYL"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "KHMS Translator",
+      "description": "DUPLICATE LISTING, see above for TestnetQualifier #125",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 93,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmbhzQ4YAySauKw5W47iAmKRdS3U1gEYmXzzqmgESGF9Ht"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "EN Native Captioner",
+      "description": "EN Native Captioner. User has demonstrated a master of proficiency in creating captions in the English language from English (US) audio. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 95,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmTTg9u1xSdB9drvwFzQYRVDseYsnGQ7PtpKuup89iQTmh"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Kastaar",
+      "description": "Kastaar",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 97,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmdzuwFJJuoXDwdRf1JDUNREmJGTW2wpJuect83ymsKK1n"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Troubadour",
+      "description": "Troubadour",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 99,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmVjdSaxr9V4DC1CLT96pY3cgDj1vCUJjTumj6P6j7od5S"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Flemish Transcriber",
+      "description": "Flemish Transcriber. User is proficient in transcribing and creating captions in Flemish. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 101,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmYchkUCxrdcvZ7RtcaZBSZ3GuuePbTY9Vz3rs9RiYcshj"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Dutch Caption Creator",
+      "description": "Dutch Caption Creator. User has demonstrated a master of proficiency in creating captions in the Dutch language from Dutch audio. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 103,
+    "content": {
+      "field_0": 0,
+      "field_1": "Qme1NqXxZqQ2TZhgivm8RSuRsVmMhdeoRZjWNzBmUg2nMt"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Special Sauce",
+      "description": "Special Sauce. User demonstrated exceptional ability in completing tasks for KH",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 91,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmSS9rjdVgiBdLs5Lk8jz7damn1cpsZeJaqbJmW37DZ96G"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "KHMS Translator",
+      "description": "KHMS Translator. User has completed requirements in order to complete tasks for KH. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 105,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmYR42Nms2AsTm7o4hWFo8MokCc8yhH22qb3vwFGDmZPYL"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "KHMS Translator",
+      "description": "DUPLICATE LISTING, see above for TestnetQualifier #125",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 107,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmRiLxd5oZdYRK9HfyUbW3Q962LrEJVYuXUEwhnPzynkjw"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Pirate Translator/Proofreader",
+      "description": "Pirate Translator/Proofreader",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 109,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmYVVwdmE3NU7AHmgB9S2NCCxysEdyaRa45Cwj9i6Y19T3"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "Storm Trooper 2021",
+      "description": "Storm Trooper 2021",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 111,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmPYzHk31JLsZoK2vx5GMP8SYL4pHj7wBYEv8okZFEE28s"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "ar-EG Translator",
+      "description": "Arabic Translator/Proofreader (Egyptian dialect). User has a high to expert level of Modern Standard Arabic skills in the Egyptian dialect, and a master of correct sentence structure, word choice, punctuation, and an eye for detail. ",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  },
+  {
+    "id": 113,
+    "content": {
+      "field_0": 0,
+      "field_1": "QmPyF1iAqkMicec2Kn4QANvFBg1VCwtR5Z6hLy2ckHXSar"
+    },
+    "account_id": 127,
+    "info": {
+      "name": "ar-EG Validator",
+      "description": "ar-EG Validator. User is proficient in checking others` work and validating for correctness.",
+      "type": null,
+      "image": "https://effect.network/img/logo/logo_icon.png",
+      "ishidden": false
+    }
+  }
+]}

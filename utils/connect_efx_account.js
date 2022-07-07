@@ -1,5 +1,5 @@
 const { JsSignatureProvider } = require('eosjs/dist/eosjs-jssig');      // development only
-
+const { EffectClient, createAccount, createWallet } = require('../dist/lib')
 
 /**
  * Connect with an BSC account.

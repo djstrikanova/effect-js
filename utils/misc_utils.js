@@ -3,6 +3,17 @@ const dotenv = require('dotenv')
 const { EffectClient, createAccount, createWallet } = require('../dist/lib')
 const { JsSignatureProvider } = require('eosjs/dist/eosjs-jssig');      // development only
 const {connectEosAccount, connectBscAccount} = require('./connect_efx_account')
+const fs = require('fs')
+
+// import json
+const error_qls = require('./error_correct_qualis.json').data
+const correct_qls = require('./correct_qualis.json').data
+const current_users = require('./cur_user_quali.json').data
+
+console.log('error_qls', error_qls)
+console.log('correct_qls', correct_qls)
+console.log('current_users', current_users)
+
 
 // Initialize
 dotenv.config({path: '.env'})
@@ -15,6 +26,8 @@ const config = {
     BSC_KEY: process.env.BSC_KEY
 }
 
+console.log(EffectClient)
+
 // Run the Track!! 
 main()
 
@@ -22,17 +35,15 @@ async function main () {
     try {
 
         const sdk = new EffectClient('mainnet')
+        // console.log('sdk', sdk)
 
         const effectAccount = await connectEosAccount(sdk, config)
-        // const effectAccount = await connectBscAccount(sdk)
+        // const effectAccount = await connectBscAccount(sdk, config)
         console.log('effectAccount', effectAccount)
 
-        // const json = {
-        //     name:"Force Alpha",
-        //     description:"Original Effect Force user. \nThis Qualification asserts that you have used and worked witht the original Effect Force before we moved to the new Decentralized Effect Network Force.\nA token to remember our humble beginnings. \n",
-        //     image:"https://ipfs.effect.ai/ipfs/QmNxFfFKN9htmJqYU4RxwN3UkUDD38jB4kuZHCmqLVGzwu",
-        //     ishidden:false
-        // }
+
+
+
 
         // sdk.force.uploadCampaign(json).then(console.log)
         /**
@@ -51,16 +62,18 @@ async function main () {
         /**
          * Qualification methods
          */
-        // const res = await sdk.force.getUserQualifications().catch(console.error)
-        // sdk.force.getAssignedQualifications(33).then(console.log).catch(console.error)
-        // sdk.force.editQualification(0,  'Name', 'Description', 0, 'https://www.lalala.com/hello.png', false)
+        // sdk.force.getQualifications().then(res => console.log(res.rows)).catch(console.error)
+        // sdk.force.getAssignedQualifications(417).then(console.log).catch(console.error)
+        // sdk.force.unAssignQualification(20, 417).then(console.log).catch(console.error)
+        // sdk.force.editQualification(18,  'Papiament: C1 Advanced Test', 'Description', 0, null, false).then(console.log).catch(console.error)
         // .then(console.log)
         // .catch(console.error)
         // sdk.force.getQualification(0).then(console.log).catch(console.error)
         // await sdk.force.getQualification(1).then(console.log).catch(console.error)
         
         // sdk.force.assignQualification(0,  389).then(console.log).catch(console.error)
-        sdk.force.unAssignQualification(5, 127).then(console.log).catch(console.error)
+        // sdk.force.unAssignQualification(5, 127).then(console.log).catch(console.error)
+
 
 
         
