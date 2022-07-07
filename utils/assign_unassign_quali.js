@@ -84,8 +84,8 @@ async function main () {
                         if (quali_info.info.name === errcor.err.name) {
                             console.log('found error.')
                             console.log('quali_info.info.name', quali_info.info.name)
-                            console.log('The incorrect qualification is:', errcor.err.name)
-                            console.log('The correct qualification is:', errcor.cor.name)
+                            console.log('The incorrect qualification is:', errcor.err.id)
+                            console.log('The correct qualification is:', errcor.cor.id)
 
                             // Amend the qualification
                             // sdk.force.unAssignQualification(amndql.quali_id, amndql.account_id).then(console.log).catch(console.error)

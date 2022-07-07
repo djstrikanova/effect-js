@@ -1,0 +1,20 @@
+[
+    { "old_name": "ES Translation Validator",        "old_id": 203,	"new_wrong_id": 55,	"new_correct_id": 94 },
+    { "old_name": "ZH Translation Validator",        "old_id": 205,	"new_wrong_id": 57,	"new_correct_id": 55 },
+    { "old_name": "PT Translation Validator",        "old_id": 206,	"new_wrong_id": 59,	"new_correct_id": 57 },
+    { "old_name": "RU Translation Validator",        "old_id": 207,	"new_wrong_id": 61,	"new_correct_id": 59 },
+    { "old_name": "ES Translation Master Validator", "old_id": 223,	"new_wrong_id": 63,	"new_correct_id": 61 },
+    { "old_name": "ZH Translaiton Master Validator", "old_id": 226,	"new_wrong_id": 65,	"new_correct_id": 63 },
+    { "old_name": "RU Translation Master Validator", "old_id": 225,	"new_wrong_id": 67,	"new_correct_id": 65 },
+    { "old_name": "PT Translation Master Validator", "old_id": 224,	"new_wrong_id": 69,	"new_correct_id": 67 },
+    { "old_name": "NL Translation Validator",        "old_id": 284,	"new_wrong_id": 71,	"new_correct_id": 69 },
+    { "old_name": "ID Translation Validator",        "old_id": 285,	"new_wrong_id": 73,	"new_correct_id": 71 },
+    { "old_name": "PL Translation Validator",        "old_id": 286,	"new_wrong_id": 75,	"new_correct_id": 73 },
+    { "old_name": "FR Translation Validator",        "old_id": 287,	"new_wrong_id": 77,	"new_correct_id": 75 },
+    { "old_name": "IT Translation Validator",        "old_id": 288,	"new_wrong_id": 79,	"new_correct_id": 77 },
+    { "old_name": "AR Translation Validator",        "old_id": 289,	"new_wrong_id": 81,	"new_correct_id": 79 },
+    { "old_name": "Translation Master Validator",    "old_id": 290,	"new_wrong_id": 83,	"new_correct_id": 81 },
+    { "old_name": "Subtitle Master Validator",       "old_id": 292,	"new_wrong_id": 85,	"new_correct_id": 83 },
+    { "old_name": "DE Translation Validator",        "old_id": 326,	"new_wrong_id": 87,	"new_correct_id": 85 },
+    { "old_name": "Closed Caption Test (Open Book)", "old_id": 329,	"new_wrong_id": 89,	"new_correct_id": 87 }
+] 
